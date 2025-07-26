@@ -1,34 +1,104 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background and font */
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  background: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f8;
   color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
 }
-h1, h2 {
-  color: #333366;
+
+/* Container box */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
+/* Header and titles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1f3a93;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  color: #34495e;
+}
+
+/* Paragraph text */
+p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+/* Links */
 a {
-  color: #0066cc;
+  color: #1f3a93;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-header, footer {
-  margin-bottom: 20px;
-}
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-section {
-  margin-bottom: 30px;
-}
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  max-width: 900px;
+
+/* Profile photo */
+img {
+  display: block;
   margin: auto;
+  margin-bottom: 20px;
+  border: 4px solid #1f3a93;
+}
+
+/* Project List */
+.project-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+  padding: 5px 0;
+  font-size: 1.05rem;
+}
+
+.project-list li a {
+  font-weight: bold;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
