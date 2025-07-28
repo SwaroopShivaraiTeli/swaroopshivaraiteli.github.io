@@ -1,53 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WCET Insight Engine</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart WCET Insight Engine</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      color: #1e6ab2;
+      margin-top: 2rem;
+    }
+    section {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>WCET Insight Engine</h1>
-    <p>Project by Swaroop Shivarai Teli</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>⚙️ What It Does</h2>
-      <p>This project predicts the Worst-Case Execution Time (WCET) for embedded systems loops using machine learning. It analyzes code metrics to estimate performance boundaries, helping optimize safety-critical software.</p>
-    </section>
+<header>
+  <h1>Smart WCET Insight Engine</h1>
+  <p>Project by <strong>Swaroop Shivarai Teli</strong></p>
+</header>
 
-    <section>
-      <h2>🧠 Techniques & Tools</h2>
-      <ul>
-        <li>Python, Pandas, Scikit-learn</li>
-        <li>Regression models: Decision Tree, Random Forest</li>
-        <li>SHAP Explainability</li>
-        <li>Streamlit App for visual predictions</li>
-        <li>Custom feature engineering from WCET benchmarks</li>
-      </ul>
-    </section>
+<main>
 
-    <section>
-      <h2>🎯 Outcome</h2>
-      <p>Predicted loop bounds and WCET with high accuracy. Built an interactive interface for real-time code analysis and decision-making insights.</p>
-    </section>
+  <section>
+    <h2>📘 What It Does</h2>
+    <p>
+      This project predicts the <strong>Worst-Case Execution Time (WCET)</strong> of embedded system loops using machine learning models. 
+      It analyzes static code metrics to estimate performance bottlenecks, supporting the optimization of safety-critical software.
+    </p>
+  </section>
 
-    <section>
-      <h2>🔗 Links</h2>
-      <ul>
-        <li><a href="https://github.com/SwaroopShivaraiTeli/wcet-insight-engine" target="_blank">GitHub Code</a></li>
-      </ul>
-    </section>
+  <section>
+    <h2>🛠️ Techniques & Tools</h2>
+    <ul>
+      <li>Python, Pandas, Scikit-learn</li>
+      <li>Decision Tree & Random Forest Regressors</li>
+      <li>SHAP Explainability (Beeswarm & Waterfall)</li>
+      <li>Custom feature engineering from TRDDC-TUM WCET benchmarks</li>
+      <li>Streamlit App for real-time visual prediction</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>📸 Dashboard Preview</h2>
-      <img src="wcet_dashboard.png" alt="WCET Dashboard Screenshot" width="600">
-    </section>
-  </main>
+  <section>
+    <h2>✅ Project Outcome</h2>
+    <p>
+      Successfully predicted both <code>loopQty</code> and <code>WCET</code> with high accuracy. 
+      SHAP explainability provided clear global and local insights. 
+      Built a professional Streamlit interface to support real-time analysis and decision-making for embedded systems developers.
+    </p>
+  </section>
 
-  <footer>
-    <p>← <a href="index.html">Back to Home</a></p>
-  </footer>
+  <section>
+    <h2>🔗 Links</h2>
+    <ul>
+      <li><a href="https://github.com/SwaroopShivaraiTeli/Smart-WCET-Insight-Engine" target="_blank">View GitHub Repository</a></li>
+      <li><a href="Result_Smart WCET Insight Engine.pdf" target="_blank">📄 Download Full PDF Report</a></li>
+      <li><a href="https://share.streamlit.io/SwaroopShivaraiTeli/Smart-WCET-Insight-Engine/main/smart_wcet_dashboard.py" target="_blank">▶️ Live Streamlit App (if hosted)</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📊 Dashboard Preview</h2>
+    <img src="wcet_dashboard.png" alt="WCET Dashboard Screenshot">
+    <p class="center">Upload static metrics → Predict loop bounds and WCET → Get instant explainability.</p>
+  </section>
+
+  <section>
+    <h2>🔍 SHAP Explainability</h2>
+    <img src="shap_beeswarm.png" alt="SHAP Beeswarm Plot">
+    <p class="center">Top 15 features globally impacting loopQty prediction.</p>
+
+    <img src="shap_waterfall.png" alt="SHAP Waterfall Plot">
+    <p class="center">Local SHAP values for a highly complex code segment.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>← <a href="../../index.html">Back to Portfolio Home</a> | © 2025 Swaroop Shivarai Teli</p>
+</footer>
+
 </body>
 </html>
