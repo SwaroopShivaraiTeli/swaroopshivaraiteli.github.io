@@ -6,11 +6,11 @@
   <title>Smart WCET Insight Engine</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
       padding: 2rem;
-      background-color: #f4f4f9;
-      color: #333;
+      background-color: #f7f9fb;
+      color: #222;
     }
     header, footer {
       text-align: center;
@@ -18,29 +18,28 @@
     }
     h1 {
       color: #2c3e50;
-      margin-bottom: 0.3em;
     }
     h2 {
       color: #1e6ab2;
-      margin-top: 2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
     }
     section {
-      background: #ffffff;
+      background: #fff;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
     }
     img {
       max-width: 100%;
-      height: auto;
       display: block;
       margin: 1rem auto;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 6px;
     }
     ul {
-      line-height: 1.8;
+      line-height: 1.6;
     }
     a {
       color: #0066cc;
@@ -66,8 +65,8 @@
   <section>
     <h2>📘 What It Does</h2>
     <p>
-      This project predicts the <strong>Worst-Case Execution Time (WCET)</strong> of embedded system loops using machine learning models. 
-      It analyzes static code metrics to estimate performance bottlenecks, supporting the optimization of safety-critical software.
+      This project predicts the <strong>Worst-Case Execution Time (WCET)</strong> of embedded system loops using machine learning. 
+      It analyzes static code metrics to estimate performance bottlenecks and optimize safety-critical systems.
     </p>
   </section>
 
@@ -77,17 +76,16 @@
       <li>Python, Pandas, Scikit-learn</li>
       <li>Decision Tree & Random Forest Regressors</li>
       <li>SHAP Explainability (Beeswarm & Waterfall)</li>
-      <li>Custom feature engineering from TRDDC-TUM WCET benchmarks</li>
-      <li>Streamlit App for real-time visual prediction</li>
+      <li>Custom static metric engineering from TRDDC-TUM benchmarks</li>
+      <li>Streamlit Dashboard for real-time prediction</li>
     </ul>
   </section>
 
   <section>
     <h2>✅ Project Outcome</h2>
     <p>
-      Successfully predicted both <code>loopQty</code> and <code>WCET</code> with high accuracy. 
-      SHAP explainability provided clear global and local insights. 
-      Built a professional Streamlit interface to support real-time analysis and decision-making for embedded systems developers.
+      Achieved accurate prediction of <code>loopQty</code> and <code>WCET</code>. 
+      Built a fully functional dashboard with SHAP explanations, enabling developers to understand performance risks with transparency.
     </p>
   </section>
 
@@ -96,23 +94,23 @@
     <ul>
       <li><a href="https://github.com/SwaroopShivaraiTeli/Smart-WCET-Insight-Engine" target="_blank">View GitHub Repository</a></li>
       <li><a href="Result_Smart WCET Insight Engine.pdf" target="_blank">📄 Download Full PDF Report</a></li>
-      <li><a href="https://share.streamlit.io/SwaroopShivaraiTeli/Smart-WCET-Insight-Engine/main/smart_wcet_dashboard.py" target="_blank">▶️ Live Streamlit App (if hosted)</a></li>
+      <li><a href="https://share.streamlit.io/SwaroopShivaraiTeli/Smart-WCET-Insight-Engine/main/smart_wcet_dashboard.py" target="_blank">▶️ Live Streamlit App</a></li>
     </ul>
   </section>
 
   <section>
     <h2>📊 Dashboard Preview</h2>
-    <img src="wcet_dashboard.png" alt="WCET Dashboard Screenshot">
-    <p class="center">Upload static metrics → Predict loop bounds and WCET → Get instant explainability.</p>
+    <img src="wcet_dashboard.png" alt="Streamlit Dashboard Screenshot">
+    <p class="center">Upload → Predict loopQty & WCET → Explain with SHAP.</p>
   </section>
 
   <section>
     <h2>🔍 SHAP Explainability</h2>
     <img src="shap_beeswarm.png" alt="SHAP Beeswarm Plot">
-    <p class="center">Top 15 features globally impacting loopQty prediction.</p>
+    <p class="center">Global feature impact for loop prediction.</p>
 
     <img src="shap_waterfall.png" alt="SHAP Waterfall Plot">
-    <p class="center">Local SHAP values for a highly complex code segment.</p>
+    <p class="center">Local explanation for a complex function.</p>
   </section>
 
 </main>
